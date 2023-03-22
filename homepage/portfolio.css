@@ -98,3 +98,56 @@
 .portfolio-section h3 {
   padding: 2em;
 } */
+
+/* ##################### practice ################### */
+@media only screen and (max-width: 750px) {
+  /* Simplify the navigation menu */
+  nav ul {
+    display: none;
+  }
+  .logo {
+    font-size: 200%;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .hamburger {
+    display: block;
+    font-size: 200%;
+  }
+  /* Adjust the about section */
+  .about img {
+    display: none;
+  }
+  .about-text {
+    width: 100%;
+    margin: 1rem;
+  }
+  .about-text h2 {
+    font-size: 300%;
+  }
+  .about-text h3 {
+    font-size: 200%;
+  }
+  .about-text p {
+    font-size: 100%;
+    line-height: 1.5rem;
+  }
+  /* Simplify the portfolio section */
+  .portfolio_container {
+    grid-template-columns: 100%;
+  }
+  .item {
+    margin: 0.5rem;
+    padding: 1rem;
+  }
+  .port_img {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  .portfolio-section p {
+    font-size: 100%;
+  }
+  .portfolio-section h2 {
+    font-size: 300%;
+  }
+}
