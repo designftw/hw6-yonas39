@@ -1,0 +1,11 @@
+body {
+  padding: 3em;
+  margin: 3em;
+}
+article {
+  font-size: 1.5rem;
+  line-height: 1in;
+}
+strong {
+  font-size: 1.5em;
+}

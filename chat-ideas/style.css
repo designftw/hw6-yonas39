@@ -9,7 +9,11 @@ p {
 }
 ol {
   font-size: 1.5em;
-  line-height: 0.7in;
+  line-height: 0.5in;
+}
+span {
+  font-size: 1.5em;
+  line-height: 0.5in;
 }
 
 @media (max-width: 750px) {
