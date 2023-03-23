@@ -3,6 +3,12 @@ body {
   padding: 5em;
   margin: 5em;
 }
+h3 {
+  font-size: 2em;
+  font-weight: bold;
+  text-decoration: underline;
+  text-align: center;
+}
 p {
   font-size: 2em;
   font-weight: bold;
