@@ -1,0 +1,25 @@
+body {
+  background-color: beige;
+  padding: 5em;
+  margin: 5em;
+}
+p {
+  font-size: 2em;
+  font-weight: bold;
+}
+ol {
+  font-size: 1.5em;
+  line-height: 0.7in;
+}
+
+@media (max-width: 750px) {
+  body {
+    padding: 0.5em;
+    margin: 1em;
+  }
+  p,
+  ol {
+    font-size: 1em;
+    line-height: 0.2in;
+  }
+}
