@@ -1,15 +1,11 @@
 /* your css here */
 * {
-  padding: 0;
-  margin: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   box-sizing: border-box;
 }
 body {
   background-color: #191919;
 }
 h3 {
-  /* font-size: 1.75em; */
   font-size: 150%;
 }
 
@@ -20,7 +16,7 @@ h3 {
 nav {
   position: relative;
   display: flex;
-  /* flex-wrap: wrap; */
+
   align-items: center;
   justify-content: space-between;
   padding: 2.5rem 8% 8%;
@@ -40,6 +36,7 @@ nav {
 }
 
 nav ul li {
+  font-size: 150%;
   list-style-type: none;
   display: inline-block;
   padding: 1rem 2.5rem;
@@ -81,9 +78,6 @@ nav ul li a:hover {
   width: 100%;
   padding: 5.25em 0;
   background-color: #191919;
-  /* display: flex;
-  flex-direction: column;
-  flex-wrap: wrap; */
 }
 
 .about img {
@@ -160,7 +154,6 @@ button:hover {
   justify-content: center;
   align-items: center;
   height: auto;
-  /* min-height: 25rem; */
 }
 .card {
   width: 45%;
@@ -184,11 +177,6 @@ button:hover {
   padding: 0.6rem;
 }
 
-/* .card:hover {
-  background-color: #101010;
-  border: #ff7f11 solid 0.21rem;
-  color: #ff7f11;
-} */
 .school-text span {
   font-size: 120%;
   font-weight: bold;
@@ -197,9 +185,8 @@ button:hover {
 /* ########### Portfolio styles ############## */
 .portfolio-section {
   background-color: #191919;
-  /* padding: 4rem; */
+
   margin: 4em;
-  /* padding: 1.5em; */
 }
 .portfolio-section p {
   padding: 2em;
@@ -207,7 +194,6 @@ button:hover {
 }
 
 .portfolio-section h2 {
-  /* padding: 2em; */
   text-align: center;
   color: white;
   font-size: 400%;
@@ -216,70 +202,46 @@ button:hover {
 }
 .portfolio_container {
   display: grid;
-  /* grid-template-rows: 50%; */
+
   grid-template-columns: 50% 50%;
   grid-gap: 2em;
   width: 100%;
 
   padding: 0;
-  width: 100%;
-
-  margin: 2rem;
 }
 .item {
   padding: 1rem;
   border-radius: 1.5rem;
 }
-/* .item:hover {
-  transform: translateY(-0.3rem);
-} */
+
 .grid_1 {
-  /* margin: 0 1.5em; */
   background-color: #ff7f11;
   color: #101010;
 }
-/* .grid_1:hover {
-  background-color: #101010;
-  color: #ff7f11;
-  border: #ff7f11 0.12rem solid;
-} */
+
 .grid_2 {
-  /* margin: 0 1.5em; */
   background-color: #ff7f11;
   color: #101010;
 }
-/* .grid_2:hover {
-  background-color: #101010;
-  color: #ff7f11;
-  border: #ff7f11 0.125rem solid;
-} */
+
 .grid_3 {
-  /* margin: 0 1.5em; */
   background-color: #ff7f11;
   color: #101010;
 }
-/* .grid_3:hover {
-  background-color: #101010;
-  color: #ff7f11;
-  border: #ff7f11 0.125px solid;
-} */
+
 .grid_4 {
-  /* margin: 0 1.5em; */
   background-color: #ff7f11;
   color: #101010;
 }
-/* .grid_4:hover {
-  background-color: #101010;
-  color: #ff7f11;
-  border: #ff7f11 0.125rem solid;
-} */
+
 .portfolio-section .portfolio_container .port_img {
-  width: 50%;
-  height: auto;
+  width: 100%;
+
   padding: 2em;
 
   float: left;
   margin-right: 1em;
+  border-radius: 2em;
 }
 .portfolio-section h3 {
   padding: 2em;
@@ -287,14 +249,19 @@ button:hover {
 
 /* ################## Media query ########## */
 /* when screen size is less than 750px flex wrap items */
+
 @media (max-width: 750px) {
   nav {
-    font-size: 50%;
+    display: flex;
+    flex-wrap: wrap;
     width: 100%;
   }
+
   body {
     justify-content: center;
+    width: 100%;
   }
+  /* about */
   .hero {
     width: 100%;
   }
@@ -303,12 +270,18 @@ button:hover {
     margin: 0;
     width: 100%;
   }
+  .about-text p {
+    padding: 0.5em;
+    margin: 0.2em;
+  }
+
   h2 {
     font-size: 100%;
   }
+  /* education */
   .service_ {
-    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
-    margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+    padding: 0;
+    margin: 0;
   }
   .main {
     display: flex;
@@ -321,130 +294,77 @@ button:hover {
     width: 100%;
   }
   .card {
+    margin: 0.2em;
+    padding: 0;
     width: 100%;
   }
-
+  /* portfolio */
   .portfolio-section {
     padding: 0.5rem 0.5rem 0.5rem 0.5rem;
     margin: 0.5rem 0.5rem 0.5rem 0.5rem;
   }
-
+  .portfolio-section {
+    padding: 0.1em;
+  }
   .portfolio_container {
     grid-template-columns: 100%;
-
-    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
-    margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+    margin: 0;
   }
-}
-@media print {
-  body {
-    font-size: 12pt;
-  }
-  nav,
-  footer {
-    display: none;
-  }
-  h1,
-  h2,
-  h3 {
-    break-after: avoid-page;
-  }
-  a[href^="http"]::after {
-    content: "(" attr(href) ")";
-  }
-}
-/* @media only screen and (max-width: 600px) {
-  .portfolio_container {
-    grid-template-columns: 1fr;
-  }
-} */
-
-/* CSS for small screens */
-
-/* ############ New adjustments to make it more adaptable to small screens such as mobile phone ######### */
-/* Mobile-first styles */
-/* .service_,
-.portfolio-section {
-  padding: 0.5rem;
-  margin: 0.5rem;
-}
-
-.main {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.box {
-  display: grid;
-  width: 100%;
-}
-
-.card {
-  width: 100%;
-}
-
-.portfolio_container {
-  display: grid;
-  grid-template-columns: 1fr;
-  padding: 0.5rem;
-  margin: 0.5rem;
-} */
-
-/* ############ Media query for screens larger than mobile phone; ipad laptop and desktops */
-
-/* Styles for larger screens */
-/* @media (min-width: 751px) {
-  .service_,
-  .portfolio-section {
-    padding: 1rem;
-    margin: 1rem;
-  }
-
-  .box {
-    display: grid;
+  .item {
     width: 100%;
-  }
+    height: auto;
 
-  .card {
+    padding: 0;
+    background: #ff7f11;
+    border-radius: 1.2rem;
+    margin: 0.2rem;
+    position: relative;
+    overflow: hidden;
+    text-align: left;
+  }
+  .portfolio-section .portfolio_container .port_img {
+    width: 100%;
+    padding: 0.25;
+    margin-bottom: 1em;
+
+    float: none;
+  }
+}
+
+/* ########## when screen size is over 1300px ########### */
+@media (min-width: 1300px) {
+  .portfolio-section .portfolio_container .port_img {
     width: 50%;
+    padding: 0.25;
+    margin-bottom: 1em;
+    float: left;
   }
-
-  .portfolio_container {
-    grid-template-columns: repeat(2, 1fr);
-    padding: 1rem;
-    margin: 1rem;
+  /* ###### Print ########## */
+  @media print {
+    body {
+      font-size: 12pt;
+    }
+    nav,
+    footer {
+      display: none;
+    }
+    h1,
+    h2,
+    h3 {
+      break-after: avoid-page;
+    }
+    a[href^="http"]::after {
+      content: "(" attr(href) ")";
+    }
+    body,
+    p,
+    h2,
+    h3,
+    * {
+      color: black;
+    }
+    .about-text p {
+      color: black;
+    }
   }
-} */
-
-/* ############################################################## */
-
-/* @media (max-width: 750px) {
-  .service_,
-  .portfolio-section {
-    padding: 0.5rem;
-    margin: 0.5rem;
-  }
-
-  .main {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .box {
-    display: grid;
-    width: 100%;
-  }
-
-  .card {
-    width: 100%;
-  }
-
-  .portfolio_container {
-    display: grid;
-    grid-template-columns: 1fr;
-    padding: 0.5rem;
-    margin: 0.5rem;
-  }
-} */
+}
